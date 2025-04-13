@@ -34,7 +34,7 @@ function App() {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(;
+    e.preventDefault();
     const { description, amount, category, date } = formData;
 
     if (!description || !amount || !category || !date) return;
