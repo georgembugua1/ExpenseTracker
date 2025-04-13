@@ -19,9 +19,9 @@ function App() {
   const [editingId, setEditingId] = useState(null);
   const [budget, setBudget] = useState(0);
 
-  useEffect(( => {
+  useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
-  }, [expenses]);
+  }, [expenses];
 
   const totalSpent = expenses.reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
   const remaining = budget - totalSpent;
