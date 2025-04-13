@@ -153,7 +153,7 @@ function App() {
         </select>
       </div>
 
-      {/* Expense Table */}
+      {/* Expense Table */
       <table className="expense-table">
         <thead>
           <tr>
