@@ -19,7 +19,7 @@ function App() {
   const [editingId, setEditingId] = useState(null);
   const [budget, setBudget] = useState(0);
 
-  useEffect(() => {
+  useEffect(( => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses]);
 
