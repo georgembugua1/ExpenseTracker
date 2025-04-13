@@ -164,7 +164,7 @@ function App() {
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
+        <body>
           {filteredExpenses.length ? (
             filteredExpenses.map((item) => (
               <tr key={item.id}>
@@ -185,7 +185,7 @@ function App() {
               </td>
             </tr>
           )}
-        </tbody>
+        </body>
       </table>
     </div>
   );
