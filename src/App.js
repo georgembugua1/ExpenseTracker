@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-function App() {
+function App( {
   const [expenses, setExpenses] = useState(() => {
     const stored = localStorage.getItem("expenses");
     return stored ? JSON.parse(stored) : [];
@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
-  }, [expenses];
+  }, [expenses]);
 
   const totalSpent = expenses.reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
   const remaining = budget - totalSpent;
