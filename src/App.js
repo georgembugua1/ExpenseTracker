@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-function App( {
+function App() {
   const [expenses, setExpenses] = useState(() => {
     const stored = localStorage.getItem("expenses");
     return stored ? JSON.parse(stored) : [];
@@ -47,7 +47,7 @@ function App( {
         : [...prev, updatedExpense]
     );
 
-    setEditingId(null);
+    setEditingId(null;
     setFormData({ description: "", amount: "", category: "", date: "" });
   };
 
