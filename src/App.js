@@ -34,7 +34,7 @@ function App() {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(;
     const { description, amount, category, date } = formData;
 
     if (!description || !amount || !category || !date) return;
@@ -43,7 +43,7 @@ function App() {
 
     setExpenses((prev) =>
       editingId !== null
-        ? prev.map((item) => (item.id === editingId ? updatedExpense : item)
+        ? prev.map((item) => (item.id === editingId ? updatedExpense : item))
         : [...prev, updatedExpense]
     );
 
