@@ -81,7 +81,7 @@ function App() {
     <div className="container">
       <h1>Expense Tracker</h1>
 
-      {/* Budget Section */}
+      {/* Budget Section */
       <div className="budget-section">
         <label htmlFor="budget">Set Budget:</label>
         <input
@@ -98,7 +98,7 @@ function App() {
           }}
         >
           {isOverBudget
-            ? "You have exceeded your budget!
+            ? "You have exceeded your budget!"
             : isNearBudget
             ? "You're ar your budget limit!"
             : `Remaining Budget: $${remaining.toFixed(2)}`}
