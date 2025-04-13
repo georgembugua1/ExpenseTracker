@@ -133,13 +133,13 @@ function App() {
           name="date"
           type="date"
           value={formData.date}
-          onChange={handleInput}
+          onChange={handleInput
           required
         />
         <button type="submit">{editingId ? "Update" : "Add"} Expense</button>
       </form>
 
-      {/* Filters */
+      {/* Filters */}
       <div className="controls">
         <input
           placeholder="Search..."
