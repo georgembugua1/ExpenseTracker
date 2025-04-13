@@ -70,7 +70,7 @@ function App() {
   const filteredExpenses = expenses
     .filter((item) =>
       item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchTerm.toLowerCase())
+      item.category.toLowerCase().includes(searchTerm.toLowerCase()
     )
     .sort((a, b) => {
       if (!sortKey) return 0;
@@ -85,7 +85,7 @@ function App() {
       <div className="budget-section">
         <label htmlFor="budget">Set Budget:</label>
         <input
-          id="budget
+          id="budget"
           type="number"
           value={budget}
           onChange={handleBudgetInput}
