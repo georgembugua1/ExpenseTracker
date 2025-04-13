@@ -94,7 +94,7 @@ function App() {
         <p>Total Spent: ${totalSpent.toFixed(2)}</p>
         <p
           style={{
-            color: isOverBudget ? "red" : isNearBudget ? "orange" : "green",
+            color: isOverBudget ? "red" : isNearBudget ? "orange" : "green,
           }}
         >
           {isOverBudget
@@ -123,7 +123,7 @@ function App() {
           required
         />
         <input
-          name="category" // Fixed the incorrect attribute name
+          name="category" 
           placeholder="Category"
           value={formData.category}
           onChange={handleInput}
@@ -133,7 +133,7 @@ function App() {
           name="date"
           type="date"
           value={formData.date}
-          onChange={handleInput
+          onChange={handleInput}
           required
         />
         <button type="submit">{editingId ? "Update" : "Add"} Expense</button>
