@@ -139,7 +139,7 @@ function App() {
         <button type="submit">{editingId ? "Update" : "Add"} Expense</button>
       </form>
 
-      {/* Filters */}
+      {/* Filters */
       <div className="controls">
         <input
           placeholder="Search..."
@@ -153,7 +153,7 @@ function App() {
         </select>
       </div>
 
-      {/* Expense Table */
+      {/* Expense Table */}
       <table className="expense-table">
         <thead>
           <tr>
