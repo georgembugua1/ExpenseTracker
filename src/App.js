@@ -64,13 +64,13 @@ function App() {
   };
 
   const handleBudgetInput = (e) => {
-    setBudget(Number(e.target.value));
+    setBudget(Number(e.target.value);
   };
 
   const filteredExpenses = expenses
     .filter((item) =>
       item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchTerm.toLowerCase()
+      item.category.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .sort((a, b) => {
       if (!sortKey) return 0;
