@@ -48,7 +48,7 @@ function App() {
     );
 
     setEditingId(null);
-    setFormData({ description: "", amount: "", category: "", date: "" });
+    setFormData({ description: "", amount: "", category: "", date: "" };
   };
 
   const handleDelete = (id) => {
@@ -56,7 +56,7 @@ function App() {
   };
 
   const handleEdit = (id) => {
-    const item = expenses.find((expense => expense.id === id);
+    const item = expenses.find((expense) => expense.id === id);
     if (item) {
       setFormData(item);
       setEditingId(id);
