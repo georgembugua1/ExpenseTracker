@@ -43,12 +43,12 @@ function App() {
 
     setExpenses((prev) =>
       editingId !== null
-        ? prev.map((item) => (item.id === editingId ? updatedExpense : item))
+        ? prev.map((item) => (item.id === editingId ? updatedExpense : item)
         : [...prev, updatedExpense]
     );
 
     setEditingId(null);
-    setFormData({ description: "", amount: "", category: "", date: "" };
+    setFormData({ description: "", amount: "", category: "", date: "" });
   };
 
   const handleDelete = (id) => {
