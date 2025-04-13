@@ -56,7 +56,7 @@ function App() {
   };
 
   const handleEdit = (id) => {
-    const item = expenses.find((expense) => expense.id === id);
+    const item = expenses.find((expense => expense.id === id);
     if (item) {
       setFormData(item);
       setEditingId(id);
@@ -64,7 +64,7 @@ function App() {
   };
 
   const handleBudgetInput = (e) => {
-    setBudget(Number(e.target.value);
+    setBudget(Number(e.target.value));
   };
 
   const filteredExpenses = expenses
