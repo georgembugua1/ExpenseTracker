@@ -94,11 +94,11 @@ function App() {
         <p>Total Spent: ${totalSpent.toFixed(2)}</p>
         <p
           style={{
-            color: isOverBudget ? "red" : isNearBudget ? "orange" : "green,
+            color: isOverBudget ? "red" : isNearBudget ? "orange" : "green",
           }}
         >
           {isOverBudget
-            ? "You have exceeded your budget!"
+            ? "You have exceeded your budget!
             : isNearBudget
             ? "You're ar your budget limit!"
             : `Remaining Budget: $${remaining.toFixed(2)}`}
