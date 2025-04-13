@@ -81,11 +81,11 @@ function App() {
     <div className="container">
       <h1>Expense Tracker</h1>
 
-      {/* Budget Section */
+      {/* Budget Section */}
       <div className="budget-section">
         <label htmlFor="budget">Set Budget:</label>
         <input
-          id="budget"
+          id="budget
           type="number"
           value={budget}
           onChange={handleBudgetInput}
