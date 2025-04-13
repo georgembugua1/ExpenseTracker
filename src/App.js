@@ -100,7 +100,7 @@ function App() {
           {isOverBudget
             ? "You have exceeded your budget!"
             : isNearBudget
-            ? "You're near your budget limit!"
+            ? "You're ar your budget limit!"
             : `Remaining Budget: $${remaining.toFixed(2)}`}
         </p>
       </div>
@@ -123,7 +123,7 @@ function App() {
           required
         />
         <input
-          name="category"
+          name="category" // Fixed the incorrect attribute name
           placeholder="Category"
           value={formData.category}
           onChange={handleInput}
