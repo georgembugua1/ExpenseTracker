@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import BudgetSection from './components/BudgetSection';
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseTable from './components/ExpenseTable';
 
@@ -26,13 +25,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortKey, setSortKey] = useState("");
   const [editingId, setEditingId] = useState(null);
-
- 
-  const budget = 500; 
-  const totalSpent = expenses.reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
-  const remaining = budget - totalSpent;
-  const isOverBudget = remaining < 0;
-  const isNearBudget = remaining <= budget * 0.1 && remaining > 0;
 
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
@@ -111,3 +103,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
