@@ -1,177 +1,167 @@
-/* Container for the entire app */
+
 .container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  max-width: 800px;
-  background-color: #f4f6f9;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
-/* Styling for the logo placed below the header */
-.logo-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.app-logo {
-  width: 120px; /* Set a good size for the logo */
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  border: 5px solid transparent; /* Default transparent border */
-  background-image: linear-gradient(45deg, #ff6347, #60a3bc); /* Gradient border */
-  background-clip: content-box; /* Ensures border is visible */
-}
 
-.app-logo:hover {
-  transform: scale(1.1); /* Slightly scale up the logo on hover */
-  box-shadow: 0px 10px 30px rgba(255, 99, 71, 0.6); /* Bright shadow on hover */
-  filter: brightness(1.2); /* Enhance brightness on hover */
-}
-
-/* Budget Section */
 .budget-section {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.budget-section input {
-  padding: 12px;
-  font-size: 16px;
-  margin-left: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  width: 200px;
+  margin-bottom: 20px;
 }
 
-/* Display budget status */
-.budget-section p {
-  font-size: 18px;
-  margin-top: 12px;
-  font-weight: 500;
+.budget-section label {
+  font-weight: bold;
+  display: block;
 }
 
 .budget-section p {
-  transition: color 0.3s ease;
+  margin: 10px 0;
+  font-size: 1.2em;
 }
 
-/* Expense Form */
+.budget-warning {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.over-budget {
+  color: red;
+}
+
+.near-budget {
+  color: orange;
+}
+
+.under-budget {
+  color: green;
+}
+
+
+.expense-form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
 .expense-form input,
 .expense-form button {
-  padding: 12px;
-  font-size: 16px;
-  margin: 8px 0;
-  border-radius: 8px;
-  border: 1px solid #ddd;
   width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .expense-form button {
-  background-color: #60a3bc;
+  background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .expense-form button:hover {
-  background-color: #4f7a8a;
+  background-color: #45a049;
 }
 
-/* Controls for searching and sorting */
+
 .controls {
-  margin: 20px 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .controls input,
 .controls select {
-  padding: 12px;
-  font-size: 16px;
-  margin-right: 12px;
-  border-radius: 8px;
+  padding: 8px;
+  font-size: 1rem;
   border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.controls input {
+  width: 60%;
+}
+
+.controls select {
   width: 30%;
 }
 
-/* Expense Table */
+
 .expense-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .expense-table th,
 .expense-table td {
-  padding: 14px;
+  padding: 12px;
   text-align: left;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 .expense-table th {
-  background-color: #e0f7fa;
+  background-color: #4CAF50;
+  color: white;
 }
 
 .expense-table tr:hover {
   background-color: #f1f1f1;
 }
 
+
 .expense-table button {
-  padding: 8px 14px;
-  background-color: #ff6347;
+  background-color: #ff5722;
   color: white;
-  border: none;
-  border-radius: 8px;
+  padding: 5px 10px;
+  border: none; 
+  outline: none; 
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
 .expense-table button:hover {
-  background-color: #ff4c3b;
+  background-color: #e64a19;
 }
 
-/* Expense Chart */
-.expense-chart {
-  margin-top: 40px;
-  text-align: center;
+.expense-table td button {
+  margin-right: 5px;
 }
 
-.expense-chart canvas {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-/* Warning Message */
-.warning {
-  color: red;
-  font-weight: bold;
-  margin-top: 10px;
-}
-/* Responsive Design */
+
 @media (max-width: 600px) {
-  .container {
-    padding: 10px;
-  }
-
-  .expense-form input,
-  .expense-form button,
-  .controls input,
-  .controls select {
-    width: 100%;
-  }
-
-  .budget-section {
+  .controls {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .budget-section input {
-    width: auto;
-    margin-left: 0;
+  .controls input,
+  .controls select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .expense-form input,
+  .expense-form button {
+    width: 100%;
+  }
+
+  .expense-table td {
+    padding: 8px; 
   }
 }
